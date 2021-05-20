@@ -1,0 +1,40 @@
+html {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url(fonts/Shrikhand-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto-Regular.ttf) format("truetype"), url(fonts/Roboto-Bold.ttf) format("truetype");
+}
+* {
+  font-family: "Roboto";
+}
+
+h1, h2, h3, #logo {
+  font-family: "Shrikhand";
+}
+
+header {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#logo {
+  width: 50%;
+  height: 80%;
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+  width: 80%;
+  height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
