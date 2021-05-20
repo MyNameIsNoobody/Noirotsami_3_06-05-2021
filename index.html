@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    
+    <head>
+        <meta charset="utf-8">
+        <title>Ohmyfood! - Accueil</title>
+        <link rel="stylesheet" href="css/style.css" /> 
+        <script src="https://kit.fontawesome.com/86f823ab3f.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width" />
+    </head>
 
-</head>
+    <body>
+        <header>
+            <img src="./brief\Maquettes Ohmyfood\images\logo/ohmyfood.png" alt="">
+        </header>
 
-<body>
+        <section class="search">
+            <div class="search__toolbar">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <form id="search_tb_input" method="post" action="traitement.php">
+                    <input type="text" name="location" placeholder="Paris, Belleville">
+                </form>
+            </div>
 
-</body>
+            <div class="search__intro">
+                <h1>Réservez le menu qui<br />vous convient</h1>
+                <p>Découvrez des restaurants d'exception,<br />sélectionnés par nos soins.</p>
+                <a>Explorer nos restaurants</a>
+            </div>
+        </section>
+
+        <section class="function">
+            <h2>Fonctionnement</h2>
+            <div class="function__card">
+                <i></i>
+                <p>Choisissez un restaurant</p>
+            </div>
+            <div class="function__card">
+                <i></i>
+                <p>Composez votre menu</p>
+            </div>
+            <div class="function__card">
+                <i></i>
+                <p>Dégustez au restaurant</p>
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <figure>
+                <img src="pictures/hostings/4_small/soleil.jpg" alt="Hôtel le soleil du matin">
+                <span class="restaurants__new">Nouveau</span>
+                <figcaption>
+                    <h3>La palette du goût</h3>
+                    <p>Manilmontant</p>
+                    <a class="restaurants__like"><i></i></a>
+                </figcaption>                     
+            </figure>
+
+            <figure>
+                <img src="pictures/hostings/4_small/soleil.jpg" alt="Hôtel le soleil du matin">
+                <span class="restaurants__new">Nouveau</span>
+                <figcaption>
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                    <a class="restaurants__like"><i></i></a>
+                </figcaption>                     
+            </figure>
+
+            <figure>
+                <img src="pictures/hostings/4_small/soleil.jpg" alt="Hôtel le soleil du matin">
+                <figcaption>
+                    <h3>À la française</h3>
+                    <p>Cité Rouge</p>
+                    <a class="restaurants__like"><i></i></a>
+                </figcaption>                     
+            </figure>
+
+            <figure>
+                <img src="pictures/hostings/4_small/soleil.jpg" alt="Hôtel le soleil du matin">
+                <figcaption>
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                    <a class="restaurants__like"><i></i></a>
+                </figcaption>                     
+            </figure>
+        </section>
+
+        <footer>
+            <h3>ohmyfood</h3>
+            <ul>
+                <li><i></i><a href="#">Proposer un restaurant</a></li>
+                <li><i></i><a href="#">Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </footer>
+    </body>
 </html>
