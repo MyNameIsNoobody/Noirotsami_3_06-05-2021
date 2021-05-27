@@ -1,5 +1,6 @@
-html {
+html body {
   width: 100%;
+  margin: 0;
 }
 
 @font-face {
@@ -14,7 +15,7 @@ html {
   font-family: "Roboto";
 }
 
-h1, h2, h3, #logo {
+h1, h2, h3, input {
   font-family: "Shrikhand";
 }
 
@@ -22,19 +23,61 @@ header {
   height: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
 #logo {
   width: 50%;
-  height: 80%;
+  object-fit: cover;
   margin: 0;
 }
 
-img {
+section img {
   object-fit: cover;
   width: 80%;
   height: 100px;
+}
+
+#search__border-top {
+  border-top: #dbdbdb 1px solid;
+  height: 5px;
+  background: linear-gradient(to bottom, #d3d3d3, rgba(50, 50, 50, 0.1));
+}
+
+.search__toolbar {
+  background: #eaeaea;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+}
+.search__toolbar #search__icon::before {
+  font-size: 20px;
+  position: relative;
+  top: 6px;
+  left: 40px;
+  color: #3a3a3a;
+}
+.search__toolbar input {
+  border: none;
+  text-align: center;
+  background: #eaeaea;
+  height: 95%;
+  font-size: 20px;
+  color: #3a3a3a;
+}
+
+.search__intro {
+  background: #f6f6f6;
+  height: 160px;
+  padding-top: 20px;
+  flex-direction: column;
+}
+.search__intro * {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

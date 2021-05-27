@@ -1,0 +1,48 @@
+//Section search
+
+#search__border-top
+{
+    border-top: $search-border-top 1px solid;
+    height: 5px;
+    background: linear-gradient(to bottom, $search-border-gradient, rgba(50, 50, 50, 0.1));
+}
+
+.search__toolbar
+{
+    background: $search-toolbar;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    #search__icon::before
+    {
+        font-size: 20px;
+        position: relative;
+        top: 6px;
+        left: 40px;
+        color: #3a3a3a;
+    }
+    input 
+    {
+        border: none;
+        text-align: center;
+        background: $search-toolbar;
+        height: 95%;
+        font-size: 20px;
+        color: #3a3a3a;
+    }
+}
+
+.search__intro
+{
+    background: $light-gray;
+    height: 160px;
+    padding-top: 20px;
+    flex-direction: column;
+    *
+    {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
