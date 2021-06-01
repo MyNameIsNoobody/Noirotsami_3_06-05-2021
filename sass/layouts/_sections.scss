@@ -1,4 +1,11 @@
-//Section search
+//All sections
+
+h2
+{
+    @include flex-center;
+}
+
+// Section search
 
 #search__border-top
 {
@@ -9,10 +16,9 @@
 
 .search__toolbar
 {
-    background: $search-toolbar;
+    background: $dark-gray;
     height: 35px;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     #search__icon::before
     {
         font-size: 20px;
@@ -25,7 +31,7 @@
     {
         border: none;
         text-align: center;
-        background: $search-toolbar;
+        background: $dark-gray;
         height: 95%;
         font-size: 20px;
         color: #3a3a3a;
@@ -41,8 +47,101 @@
     *
     {
         margin-top: 0;
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         text-align: center;
     }
+}
+
+// Section function
+
+.function__card
+{
+    box-shadow: 1px 1px 1px 1px rgba($color: $dark-gray, $alpha: 0.1);
+    background-color: $light-gray;
+    border-radius: 20px 20px 20px 20px;
+    height: 70px;
+    width: 90%;
+    @include flex-center;
+    align-items: center;
+    margin: 20px;
+    span
+    {
+        width: 5%;
+        position: relative;
+        right: 8px;
+        background-color: $colour-primary;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        margin-right: 5%;
+    }
+    i 
+    {
+        width: 20%;
+        color: #7e7e7e;
+    }
+    p 
+    {
+        width: 75%;
+        font-weight: bold;
+    }
+}
+
+
+// Section restaurants
+
+.restaurants
+{
+    background-color: $light-gray;
+    @include flex-center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+figure 
+{
+    width: 90%;
+    height: 300px;
+    margin-right: 5%;
+    margin-left: 5%;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    img 
+    {
+        border-radius: 20px 20px 0px 0px;
+        width: 100%;
+        height: 70%;
+        position: relative;
+    }
+    .restaurants__new
+    {
+        position: absolute;
+        padding: 8px 16px 8px 16px;
+        text-align: center;
+        right: 40px;
+        margin-top: 15px;
+        color: #139273;
+        font-weight: bold;
+        background-color: $colour-tertiary;
+    }
+    figcaption 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        h3, p 
+        {
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            width: 60%;
+        }
+        a.restaurants__like
+        {
+            font-size: 35px;
+            position: relative;
+            left: 50px;
+            top: -15px;
+        }
+    }   
 }
