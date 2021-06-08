@@ -1,11 +1,21 @@
 .restaurants__new
 {
-    position: absolute;
+    position: relative;
+    width: 100px;
     padding: 8px 16px 8px 16px;
     text-align: center;
-    right: 40px;
-    margin-top: 15px;
+    left: 68%;
+    bottom: 200px;
     color: #139273;
     font-weight: bold;
     background-color: $colour-tertiary;
+}
+
+.restaurants__like
+{
+    align-self: flex-end;
+    right: 60px;
+    bottom: 50px;
+    font-size: 35px;
+    position: relative;
 }

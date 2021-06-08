@@ -10,7 +10,7 @@
 
     <body>
         <header>
-            <img id="logo" src="./brief/Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="">
+            <img id="logo" src="./brief/maquettes_ohmyfood/images/logo/ohmyfood.png" alt="" />
         </header>
 
         <section class="search">
@@ -18,7 +18,7 @@
 
             <div class="search__toolbar">
                 <i class="fas fa-map-marker-alt" id="search__icon" aria-hidden="true"></i>
-                <form id="search_tb_input" method="post" action="traitement.php">
+                <form method="post" action="traitement.php">
                     <input type="text" name="location" placeholder="Paris, Belleville">
                 </form>
             </div>
@@ -57,51 +57,60 @@
 
         <section class="restaurants">
             <h2>Restaurants</h2>
-            <a href="#" class="restaurants__card">
-                <figure>
-                    <img src="./brief/Maquettes Ohmyfood/images/restaurants/palette.jpg" alt="La palette du goût" />
-                    <span class="restaurants__new">Nouveau</span>
-                    <figcaption>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                        <a class="restaurants__like"><i class="far fa-heart"></i></a>
-                    </figcaption>                     
-                </figure>
-            </a>
             
-            <a href="#" class="restaurants__card">
-                <figure>
-                    <img src="./brief/Maquettes Ohmyfood/images/restaurants/note.jpg" alt="La note enchantée" />
-                    <span class="restaurants__new">Nouveau</span>
-                    <figcaption>
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                        <a class="restaurants__like"><i class="far fa-heart"></i></a>
-                    </figcaption>                     
-                </figure>
-            </a>
-               
-            <a href="#" class="restaurants__card">
-                <figure>
-                    <img src="./brief/Maquettes Ohmyfood/images/restaurants/française.jpg" alt="À la française" />
-                    <figcaption>
-                        <h3>À la française</h3>
-                        <p>Cité Rouge</p>
-                        <a class="restaurants__like"><i class="far fa-heart"></i></a>
-                    </figcaption>                     
-                </figure>
-            </a>
-              
-            <a href="#" class="restaurants__card">
-                <figure>
-                    <img src="./brief/Maquettes Ohmyfood/images/restaurants/délice.jpg" alt="Le délice des sens" />
-                    <figcaption>
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                        <a class="restaurants__like"><i class="far fa-heart"></i></a>
-                    </figcaption>                     
-                </figure>
-            </a>
+            <div class="restaurants__card">
+                <a href="#">
+                    <figure>
+                        <img src="./brief/maquettes_ohmyfood/images/restaurants/palette.jpg" alt="La palette du goût" />
+                        <span class="restaurants__new">Nouveau</span>
+                        <figcaption>
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                            <i class="far fa-heart restaurants__like"></i>
+                        </figcaption> 
+                    </figure> 
+                </a> 
+            </div>                    
+            
+            <div class="restaurants__card">
+                <a href="#">
+                    <figure>
+                        <img src="./brief/maquettes_ohmyfood/images/restaurants/note.jpg" alt="La note enchantée" />
+                        <span class="restaurants__new">Nouveau</span>
+                        <figcaption>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                            <i class="far fa-heart restaurants__like"></i>
+                        </figcaption>                     
+                    </figure>
+                </a>
+            </div>
+             
+            <div class="restaurants__card">
+                <a href="#">
+                    <figure>
+                        <img src="./brief/maquettes_ohmyfood/images/restaurants/française.jpg" alt="À la française" />
+                        <figcaption>
+                            <h3>À la française</h3>
+                            <p>Cité Rouge</p>
+                            <i class="far fa-heart restaurants__like"></i>
+                        </figcaption>                     
+                    </figure>
+                </a>
+            </div>
+             
+            <div class="restaurants__card">
+                <a href="#">
+                    <figure>
+                        <img src="./brief/maquettes_ohmyfood/images/restaurants/délice.jpg" alt="Le délice des sens" />
+                        <figcaption>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                            <i class="far fa-heart restaurants__like"></i>
+                        </figcaption>                     
+                    </figure>
+                </a>
+            </div>
         </section>
 
         <footer>
