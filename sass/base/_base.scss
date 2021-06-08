@@ -5,4 +5,13 @@ html
         width: 100%;
         margin: 0;
     }
+    a, a:link
+    {
+        text-decoration: none;
+        color: inherit;
+    }
+    img 
+    {
+        object-fit: cover;
+    }
 }
