@@ -3,15 +3,13 @@
     @include flex-center;
     align-items: center;
     margin-bottom: 20px;
-    a 
+    a, figure 
     {
         max-width: 380px;
         height: 300px;
     }
     figure 
     {
-        max-width: 380px;
-        height: 300px;
         margin: 0;
         box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
         background-color: white;

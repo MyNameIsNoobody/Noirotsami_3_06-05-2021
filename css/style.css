@@ -22,10 +22,9 @@ footer h2 {
 
 .restaurants__new {
   position: relative;
-  width: 100px;
   padding: 8px 16px 8px 16px;
   text-align: center;
-  left: 68%;
+  left: 70%;
   bottom: 200px;
   color: #139273;
   font-weight: bold;
@@ -60,13 +59,11 @@ header {
   align-items: center;
   margin-bottom: 20px;
 }
-.restaurants__card a {
+.restaurants__card a, .restaurants__card figure {
   max-width: 380px;
   height: 300px;
 }
 .restaurants__card figure {
-  max-width: 380px;
-  height: 300px;
   margin: 0;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
@@ -236,10 +233,9 @@ footer .footer__li {
 
 .restaurants__new {
   position: relative;
-  width: 100px;
   padding: 8px 16px 8px 16px;
   text-align: center;
-  left: 68%;
+  left: 70%;
   bottom: 200px;
   color: #139273;
   font-weight: bold;
