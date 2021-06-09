@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+html {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
 html body {
   width: 100%;
   margin: 0;
@@ -94,7 +99,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 10px 20px 10px;
+  margin: 10px;
 }
 .restaurants__card a, .restaurants__card figure {
   width: 360px;
@@ -203,6 +208,7 @@ section h2 {
 
 .function__flex {
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 @media (min-width: 599px) {
@@ -255,15 +261,16 @@ footer a {
   text-decoration: none;
 }
 footer i {
-  position: absolute;
-  left: 40px;
+  position: relative;
+  width: 15px;
+  left: -10px;
   font-size: 15px;
 }
 footer li {
   margin-top: 8px;
 }
 footer .footer__li {
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .restaurants__new {

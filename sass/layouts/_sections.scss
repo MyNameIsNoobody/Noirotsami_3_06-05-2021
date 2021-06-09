@@ -82,7 +82,7 @@ section h2
 
 .function__flex
 {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
     @media (min-width: 599px)
     {

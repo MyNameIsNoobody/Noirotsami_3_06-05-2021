@@ -24,10 +24,11 @@ footer
     {
         text-decoration: none;
     }
-    i 
+    i
     {
-        position: absolute;
-        left: 40px;
+        position: relative;
+        width: 15px;
+        left: -10px;
         font-size: 15px;
     }
     li 
@@ -36,6 +37,6 @@ footer
     }
     .footer__li
     {
-        margin-left: 30px;
+        margin-left: 10px;
     }
 }
