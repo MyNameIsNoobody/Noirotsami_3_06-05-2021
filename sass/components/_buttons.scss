@@ -4,7 +4,7 @@
     padding: 8px 16px 8px 16px;
     text-align: center;
     left: 70%;
-    bottom: 200px;
+    bottom: 140px;
     color: #139273;
     font-weight: bold;
     background-color: $colour-tertiary;
@@ -17,4 +17,43 @@
     bottom: 50px;
     font-size: 35px;
     position: relative;
+}
+
+.function__card
+{
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+    background-color: $light-gray;
+    border-radius: 20px 20px 20px 20px;
+    height: 70px;
+    width: 90%;
+    @include flex-center;
+    align-items: center;
+    margin: 10px auto 20px auto;
+    @media (min-width: 599px)
+    {
+        width: 30%;
+        margin: 20px;
+    }
+    span
+    {
+        width: 18px;
+        position: relative;
+        right: 8px;
+        background-color: $colour-primary;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        margin-right: 5%;
+    }
+    i 
+    {
+        width: 20%;
+        color: #7e7e7e;
+    }
+    p 
+    {
+        width: 50%;
+        margin-right: auto;
+        font-weight: bold;
+    }
 }

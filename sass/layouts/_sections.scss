@@ -1,6 +1,11 @@
 section h2 
 {
     padding-left: 5%;
+    @media (min-width : 599px) 
+    {
+        @include flex-center;
+        padding-left: 0;
+    }
 }
 
 // Section search
@@ -73,49 +78,36 @@ section h2
     }
 }
 
-// Section function
+// Section Function
 
-.function__card
+.function__flex
 {
-    box-shadow: 1px 1px 1px 1px rgba($color: $dark-gray, $alpha: 0.1);
-    background-color: $light-gray;
-    border-radius: 20px 20px 20px 20px;
-    height: 70px;
-    width: 90%;
-    @include flex-center;
-    align-items: center;
-    margin: 20px auto 20px auto;
-    span
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 599px)
     {
-        width: 18px;
-        position: relative;
-        right: 8px;
-        background-color: $colour-primary;
-        border-radius: 50%;
-        color: white;
-        text-align: center;
-        margin-right: 5%;
-    }
-    i 
-    {
-        width: 20%;
-        color: #7e7e7e;
-    }
-    p 
-    {
-        width: 50%;
-        margin-right: auto;
-        font-weight: bold;
+        flex-direction: row;
     }
 }
-
 
 // Section restaurants
 
 .restaurants
 {
     background-color: $light-gray;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-top: 50px;
+}
+
+.restaurants__flex
+{
     @include flex-center;
     flex-direction: column;
-    padding-bottom: 50px;
+    @media (min-width: 599px)
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
