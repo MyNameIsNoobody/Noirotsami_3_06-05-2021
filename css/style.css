@@ -94,7 +94,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 10px 10px 20px 10px;
 }
 .restaurants__card a, .restaurants__card figure {
   width: 360px;
@@ -197,7 +197,7 @@ section h2 {
   padding: 20px;
   color: white;
   border-radius: 50px;
-  width: 50%;
+  width: 250px;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
 
