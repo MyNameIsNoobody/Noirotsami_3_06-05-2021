@@ -1,15 +1,12 @@
 header
 {
-    height: 40px;
-    display: flex;
-    justify-content: center;
+    height: 80px;
+    @include flex-center;
     align-items: center;
-    margin-top: 20px;
 }
 
 #logo
 {
     width: 220px;
     object-fit: cover;
-    margin: 0;
 }

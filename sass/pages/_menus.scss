@@ -1,0 +1,75 @@
+#welcome__page
+{
+    position: absolute;
+    font-size: 26px;
+    left: 20px;
+}
+
+#menu__picture
+{
+    position: absolute;
+    z-index: 1;
+    max-width: 425px;
+}
+
+.order__like
+{
+    position: relative;
+    right: -120px;
+}
+
+.order
+{
+    position: relative;
+    z-index: 2;
+    top: 230px;
+    background-color: $light-gray;
+    @include flex-center;
+    flex-direction: column;
+    padding-left: 20px;
+    border-radius: 50px 50px 0 0;
+    margin-bottom: 230px;
+    padding-bottom: 100px;
+    h1 
+    {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    h2 
+    {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 20px;
+        border-bottom: $colour-tertiary 3px solid;
+        margin-right: 355px;
+        padding-bottom: 5px;
+    }
+    a 
+    {
+        @extend .main__button;
+        width: 150px;
+        margin-top: 30px;
+        position: relative;
+        left: -20px;
+    }
+}
+
+.order__command
+{
+    @extend .order__buttons;
+    p 
+    {
+        margin: 0;
+    }
+    h3 
+    {
+        margin-bottom: 5px;
+    }
+    .order__price
+    {
+        position: relative;
+        left: 320px;
+        bottom: 20px;
+        font-weight: bold;
+    }
+}
