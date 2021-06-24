@@ -4,13 +4,13 @@ footer
     flex-direction: column;
     height: 200px;
     background-color: $footer-black;
+    padding-left: 30px;
     i, a, h2 
     {
         color: white;
     }
     h2 
     {
-        padding-left: 40px;
         font-size: 20px;
         margin-bottom: 0;
         margin-top: 0;
@@ -19,6 +19,7 @@ footer
     ul 
     {
         list-style: none;
+        padding-left: 0;
     }
     a 
     {
