@@ -14,6 +14,10 @@
   width: 90%;
 }
 
+/*background-clip: text;
+transform
+loader css3
+z-index*/
 html {
   max-width: 1440px;
   margin-left: auto;
@@ -25,7 +29,7 @@ html body {
 }
 html a, html a:link {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 html img {
   object-fit: cover;
