@@ -1,3 +1,5 @@
+// All sections
+
 .function h2, .restaurants h2 
 {
     padding-left: 5%;
@@ -7,6 +9,15 @@
         padding-left: 0;
     }
 }
+
+section
+{
+    a, a:link
+    {
+        text-decoration: none;
+        color: inherit;
+    }
+} 
 
 // Section search
 

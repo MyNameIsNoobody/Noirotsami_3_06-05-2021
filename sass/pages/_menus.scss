@@ -14,13 +14,12 @@
     @include flex-center;
     flex-direction: column;
     border-radius: 50px 50px 0 0;
-    margin-bottom: 230px;
     padding-bottom: 100px;
     h1 
     {
         font-size: 30px;
         padding-top: 20px;
-        @extend .order__alignement;
+        @include order-alignement;
     }
     h2 
     {
@@ -42,21 +41,49 @@
 
 .order__command
 {
-    @extend .order__buttons;
-    p 
+    @include order-buttons;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    p, h3
     {
-        margin: 0;
-    }
-    h3 
-    {
+        margin-top: 0;
         margin-bottom: 5px;
+        overflow: hidden;
     }
-    .order__price
+    .command__price
     {
-        position: relative;
-        left: 85%;
-        bottom: 20px;
+        width: 80px;
+        display: flex;
+        justify-content: flex-end;
         font-weight: bold;
+        margin-top: 20px;
+        padding-right: 5px;
+    }
+    .command__check
+    {
+        width: 70px;
+        height: 83px;
+        @include flex-center;
+        align-items: center;
+        position: relative;
+        bottom: 1px;
+        right: -15px;
+        border-radius: 0 20px 20px 0;
+        background-color: $colour-tertiary;
+        i
+        {
+            font-size: 25px;
+            color: white;
+        }
+    }
+}
+.order__command:hover
+{
+    .command__check
+    {
+        transform: translate(-15px)
     }
 }
 
