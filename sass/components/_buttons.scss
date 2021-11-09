@@ -1,6 +1,6 @@
 // All pages
 
-.main__button
+.main-button
 {
     text-decoration: none;
     box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
@@ -12,12 +12,25 @@
     color: white;
     border-radius: 50px;
     background: linear-gradient(to bottom, $colour-secondary, $colour-primary);
+    position: relative;
+    z-index: 1;
+    &:hover
+    {
+        &::after
+        {
+            opacity: 1;
+        }
+    }
+    &::after 
+    {
+        background: linear-gradient(to bottom, lighten($colour-secondary, 3), lighten($colour-primary, 3));
+        box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
+        border-radius: 50px;
+        @include position-after;
+    }   
 }
-.main__button:hover 
-{
-    background: linear-gradient(to bottom, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
-    box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
-}
+
+
 
 // Welcome page
 
@@ -36,8 +49,8 @@
 .restaurants__like
 {
     align-self: flex-end;
-    right: 60px;
-    bottom: 50px;
+    right: 40px;
+    bottom: 40px;
     font-size: 35px;
     position: relative;
 }
@@ -46,13 +59,34 @@
 {
     box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
     background-color: $light-gray;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     height: 70px;
     width: 90%;
     @include flex-center;
     align-items: center;
     margin: 10px auto 20px auto;
-    @media (min-width: 599px)
+    position: relative;
+    z-index: 1;
+    &:hover
+    {
+        i
+        {
+            color: $colour-primary;
+            transition: color 300ms;
+        }
+        &::after 
+        {
+            opacity: 1
+        }
+    }
+    &::after 
+    {
+        box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
+        border-radius: 20px;
+        background-color: #f5edff;
+        @include position-after;
+    }
+    @media (min-width: 699px)
     {
         width: 30%;
         margin: 20px;
@@ -79,12 +113,6 @@
         margin-right: auto;
         font-weight: bold;
     }
-}
-
-.function__card:hover
-{
-    background-color: #f5edff;
-    box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
 }
 
 // Menus pages

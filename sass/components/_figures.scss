@@ -3,6 +3,11 @@
     @include flex-center;
     align-items: center;
     margin: 10px;
+    &__link
+    {
+        text-decoration: none;
+        color: inherit;
+    }
     a, figure 
     {
         width: 360px;
@@ -13,7 +18,7 @@
         margin: 0;
         box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
         background-color: white;
-        border-radius: 20px 20px 20px 20px;
+        border-radius: 20px;
         img 
         {
             border-radius: 20px 20px 0px 0px;

@@ -3,21 +3,12 @@
 .function h2, .restaurants h2 
 {
     padding-left: 5%;
-    @media (min-width : 599px) 
+    @media (min-width : 699px) 
     {
         @include flex-center;
         padding-left: 0;
     }
 }
-
-section
-{
-    a, a:link
-    {
-        text-decoration: none;
-        color: inherit;
-    }
-} 
 
 // Section search
 
@@ -77,7 +68,7 @@ section
     }
     a 
     {
-        @extend .main__button;
+        @extend .main-button;
         width: 250px;
     }
 }
@@ -88,7 +79,7 @@ section
 {
     @include flex-center;
     flex-direction: column;
-    @media (min-width: 599px)
+    @media (min-width: 699px)
     {
         flex-direction: row;
     }
@@ -108,7 +99,7 @@ section
 {
     @include flex-center;
     flex-direction: column;
-    @media (min-width: 599px)
+    @media (min-width: 699px)
     {
         flex-direction: row;
         flex-wrap: wrap;
