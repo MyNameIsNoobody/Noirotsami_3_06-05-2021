@@ -1,5 +1,5 @@
 $num-spinners: 3;
-$anim-dur: 2000ms;
+$anim-dur: 1500ms;
 $anim-delay: $anim-dur / $num-spinners;
 
 .loader
@@ -10,15 +10,16 @@ $anim-delay: $anim-dur / $num-spinners;
     max-width: 1440px;
     height: 100%;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    animation: loader-page 3s both;
+    animation: loader-page 4s both;
     &__spinner
     {
+        position: relative;
+        bottom: 150px;
         display: flex;
-        margin-bottom: 80px;
         flex-direction: column;
         align-items: center;
         justify-content: end;
@@ -115,6 +116,10 @@ $anim-delay: $anim-dur / $num-spinners;
     0%
     {
         transform: rotate(-30deg);
+    }
+    20%
+    {
+        transform: rotate(-30deg)
     }
     50%
     {

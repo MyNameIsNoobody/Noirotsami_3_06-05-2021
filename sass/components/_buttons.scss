@@ -30,8 +30,6 @@
     }   
 }
 
-
-
 // Welcome page
 
 .restaurants__new
@@ -48,26 +46,39 @@
 
 .restaurants__like
 {
+    cursor: pointer;
     align-self: flex-end;
-    right: 40px;
-    bottom: 40px;
+    right: 60px;
+    bottom: 30px;
     font-size: 35px;
     position: relative;
     background: linear-gradient(to bottom, $colour-primary 0%,$colour-secondary 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color:black;
-    z-index: 2;
+    z-index: 3;
+    transform: all 300ms;
+    &:hover, &:enabled
+    {
+        -webkit-text-fill-color:transparent;
+    }
+    &:hover + &--full
+    {
+        -webkit-text-fill-color:transparent;
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .restaurants__like--full
 {
     font-size: 35px;
-    top: -75px;
-    left: -40px;
+    top: -30px;
+    right: 95px;
     opacity: 0;
     transform: scale(0.5);
     transition: transform 600ms ease-in-out, opacity 300ms ease-in-out;
-    &:hover, &:checked
+    z-index: 2;
+    &:hover, &:enabled
     {
         opacity: 1;
         transform: scale(1);
@@ -129,7 +140,6 @@
     }
     p 
     {
-        width: 50%;
         margin-right: auto;
         font-weight: bold;
     }
