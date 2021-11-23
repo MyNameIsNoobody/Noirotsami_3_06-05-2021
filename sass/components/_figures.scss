@@ -1,3 +1,9 @@
+.restaurants__card__link
+{
+    position: relative;
+    z-index: 1
+}
+
 .restaurants__card
 {
     @include flex-center;

@@ -1,0 +1,150 @@
+$num-spinners: 3;
+$anim-dur: 2000ms;
+$anim-delay: $anim-dur / $num-spinners;
+
+.loader
+{
+    background-color: white;
+    margin-top: -80px;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: loader-page 3s both;
+    &__spinner
+    {
+        display: flex;
+        margin-bottom: 80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        width: 200px;
+        height: 200px;
+        &__pan
+        {
+            position: relative;
+            top: 100px;
+            width: 50px;
+            height: 10px;
+            background-color: black;
+            border-radius: 0 0 1.4em 1.4em;
+            animation: pan-handle $anim-dur both infinite;
+            transform-origin: -15% 0;
+            @for $i from 1 to $num-spinners 
+            {
+                &--#{$i}
+                {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+        }
+        &__handle
+        {
+            position: relative;
+            top: 90px;
+            right: 40px;
+            width: 50px;
+            height: 10px;
+            background-color: transparent;
+            border-top: 3px solid black;
+            border-left: 3px transparent; 
+            border-radius: 100%;
+            animation: pan-handle $anim-dur both infinite;
+            @for $i from 1 to $num-spinners 
+            {
+                &--#{$i}
+                {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+        }
+        &__circle
+        {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            display: inline-block;
+            animation: circles $anim-dur both infinite;
+            &--1
+            {
+                background-color: $colour-primary;
+            }
+            &--2
+            {
+                background-color: $colour-secondary;
+            }
+            &--3
+            {
+                background-color: $colour-tertiary;
+            }
+            @for $i from 1 to $num-spinners 
+            {
+                &--#{$i}
+                {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes loader-page
+{
+    90%
+    {
+        opacity: 1;
+    }
+    99%
+    {
+        z-index: 2;
+    }
+    100%
+    {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes pan-handle
+{
+    0%
+    {
+        transform: rotate(-30deg);
+    }
+    50%
+    {
+        transform: rotate(0);
+    }
+    60%, 100%
+    {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes circles
+{
+    0%, 100% 
+    {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% 
+    {
+        transform: rotateX(0deg);
+        transform: translateY(0);
+    }
+    50% 
+    {
+        transform: rotateX(180deg);
+        transform: translateY(200%);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% 
+    {
+        transform: rotateX(180deg);
+    }
+}
