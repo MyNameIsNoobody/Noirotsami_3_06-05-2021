@@ -5,6 +5,15 @@
     left: 20px;
 }
 
+#menu__picture
+{
+    height: 300px;
+    @media screen and (min-width: 699px)
+    {
+        height: 500px;
+    }
+}
+
 .order
 {
     position: relative;
@@ -20,6 +29,10 @@
         font-size: 30px;
         padding-top: 20px;
         @include order-alignement;
+        @media screen and (min-width: 699px) 
+    {
+        @include flex-center
+    }
     }
     h2 
     {
@@ -28,7 +41,7 @@
         font-size: 20px;
         border-bottom: $colour-tertiary 3px solid;
         width: 50px;
-        margin-left: 30px;
+        margin-left: 20px;
         padding-bottom: 5px;
     }
     a 
@@ -42,53 +55,123 @@
 .order__command
 {
     @include order-buttons;
+    width: 380px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    p, h3
+    justify-content: space-between;
+    animation: order-pop 1s both;
+    @for $i from 1 to $num-orders
     {
-        margin-top: 0;
-        margin-bottom: 5px;
-        overflow: hidden;
+        &--#{$i}
+        {
+            animation-delay: $delay-order * $i;
+        }
+    }
+    &:hover 
+    {
+        .command__check
+        {
+            transform: scaleX(1);
+            opacity: 1;
+            i 
+            {
+                transform: rotateZ(360deg)
+            }
+        }
+        .command__price
+        {
+            transform: translateX(0);
+        }
+        .command__text
+        {
+            width: 230px;
+            transition: 400ms ease-out;
+            p, h3 
+            {
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    .command__text
+    {
+        min-width: 250px;
+        width: 300px;
+        p, h3
+        {
+            margin-top: 0;
+            margin-bottom: 5px;
+            width: 100%;
+            white-space: nowrap;
+        }
     }
     .command__price
     {
-        width: 80px;
-        display: flex;
-        justify-content: flex-end;
+        width: 40px;
         font-weight: bold;
+        transform: translateX(60px);
+        transition: transform 400ms ease-out;
         margin-top: 20px;
-        padding-right: 5px;
     }
     .command__check
     {
         width: 70px;
-        height: 83px;
+        position: relative;
+        border-top: 2px solid $colour-tertiary;
+        border-right: 2px solid $colour-tertiary;
+        padding-right: 2px;
+        height: 100%;
+        transform-origin: right;
+        transform: scaleX(0);
+        opacity: 0;
+        transition: transform 400ms ease-out;
         @include flex-center;
         align-items: center;
-        position: relative;
-        bottom: 1px;
-        right: -15px;
         border-radius: 0 20px 20px 0;
         background-color: $colour-tertiary;
         i
         {
             font-size: 25px;
             color: white;
+            transform: rotateZ(0deg);
+            transition: transform 500ms ease-out;
         }
     }
 }
-.order__command:hover
-{
-    .command__check
-    {
-        transform: translate(-15px)
-    }
-}
 
-.order__starters, .order__dishes, .order__desserts
+.order__flex
 {
     @include flex-center;
     flex-direction: column;
+    @media screen and (min-width: 699px)
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;   
+    }
+}
+
+@keyframes order-pop
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50%
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    75%
+    {
+        opacity: 0.5;
+
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -57,7 +57,7 @@
     -webkit-text-fill-color:black;
     z-index: 3;
     transform: all 300ms;
-    &:hover, &:enabled
+    &:hover, &:active
     {
         -webkit-text-fill-color:transparent;
     }
@@ -149,6 +149,41 @@
 
 .order__like
 {
+    cursor: pointer;
+    align-self: flex-end;
+    right: 35px;
+    top: 50px;
+    font-size: 35px;
     position: absolute;
-    right: 10%;
+    background: linear-gradient(to bottom, $colour-primary 0%,$colour-secondary 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:black;
+    z-index: 3;
+    transform: all 300ms;
+    &:hover, &:active
+    {
+        -webkit-text-fill-color:transparent;
+    }
+    &:hover + &--full
+    {
+        -webkit-text-fill-color:transparent;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.order__like--full
+{
+    font-size: 35px;
+    opacity: 0;
+    margin-left: 100px;
+    transform: scale(0.5);
+    transition: transform 600ms ease-in-out, opacity 300ms ease-in-out;
+    z-index: 2;
+    &:hover, &:enabled
+    {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-text-fill-color:transparent;
+    }
 }

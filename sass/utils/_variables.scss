@@ -9,3 +9,12 @@ $search-border-gradient: #d3d3d3;
 $dark-gray: #eaeaea;
 $light-gray: #f6f6f6;
 $footer-black: #353535;
+
+// Animation
+$num-spinners: 3;
+$anim-dur: 1500ms;
+$anim-delay: $anim-dur / $num-spinners;
+
+$num-orders: 11;
+$dur-order: 1500ms;
+$delay-order: $dur-order / $num-orders;
