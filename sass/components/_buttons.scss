@@ -54,7 +54,6 @@
     position: relative;
     background: linear-gradient(to bottom, $colour-primary 0%,$colour-secondary 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color:black;
     z-index: 3;
     &:hover, &:active
     {
@@ -70,7 +69,6 @@
 
 .restaurants__like--full
 {
-    font-size: 35px;
     top: -30px;
     right: 95px;
     opacity: 0;

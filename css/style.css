@@ -80,7 +80,6 @@ footer h2, .order h1 {
   position: relative;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: black;
   z-index: 3;
 }
 .restaurants__like:hover, .restaurants__like:active {
@@ -93,7 +92,6 @@ footer h2, .order h1 {
 }
 
 .restaurants__like--full {
-  font-size: 35px;
   top: -30px;
   right: 95px;
   opacity: 0;
