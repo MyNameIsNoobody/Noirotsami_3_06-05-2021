@@ -82,7 +82,6 @@ footer h2, .order h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: black;
   z-index: 3;
-  transform: all 300ms;
 }
 .restaurants__like:hover, .restaurants__like:active {
   -webkit-text-fill-color: transparent;
@@ -178,7 +177,6 @@ footer h2, .order h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: black;
   z-index: 3;
-  transform: all 300ms;
 }
 .order__like:hover, .order__like:active {
   -webkit-text-fill-color: transparent;

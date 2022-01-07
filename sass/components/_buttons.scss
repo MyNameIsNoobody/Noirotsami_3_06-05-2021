@@ -56,7 +56,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color:black;
     z-index: 3;
-    transform: all 300ms;
     &:hover, &:active
     {
         -webkit-text-fill-color:transparent;
@@ -159,7 +158,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color:black;
     z-index: 3;
-    transform: all 300ms;
     &:hover, &:active
     {
         -webkit-text-fill-color:transparent;
